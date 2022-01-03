@@ -20,9 +20,28 @@ public class TicTacToe implements ActionListener {
     //un peux comme un span ou une div qui est incrustrer dans la div parent qui est frame
     JPanel title_panel = new JPanel();
 
+    //ce jpanel contiendra tout les bouttons contenue dans mon application
+    JPanel button = new JPanel();
+
+    //you know what is up
+    JLabel textfield = new JLabel();
+
+    //definire une array de taille 9 pour les bouttons dont j'aurai besoin  dans mon application
+
+  JButton [] buttons = new JButton[9];
+
+  //varai si cest le tour du player 1 faux sinon
+  boolean player1_turn;
 
     TicTacToe(){
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(800, 800);
+        frame.getContentPane().setBackground(new Color(50,50,50));
+        frame.setLayout(new BorderLayout());
+        frame.setVisible(true);
 
+        textfield.setBackground(new Color(25, 25,25));
+        textfield.setForeground(new Color(25, 255, 0));
     }
 
 
